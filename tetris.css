@@ -1,0 +1,24 @@
+* {
+    font-family: fantasy;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+body {
+    background-image: url(background.png);
+    background-size: cover;
+}
+
+button {
+    
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+#name-label,
+#start-btn {
+    font-size: 1.3rem;
+}
