@@ -27,13 +27,17 @@ button:hover {
 
 /* Intro Section */
 
-#intro-section {
+#start-wrap {
+    padding-bottom: 1.5rem;
+}
+
+#intro-wrap {
     padding-bottom: 2rem;
 }
 
 h1 {
     color: #6e78ff;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 input {
@@ -52,4 +56,47 @@ input:focus {
 
 #name-label {
     font-size: 1.3rem;
+}
+
+/* Game Play Section */
+
+#game-info-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+.game-info {
+    /* border: 2px solid #6e78ff; */
+    font-weight: lighter;
+}
+
+#tetris-box-wrap {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+    padding-bottom: 2rem;
+    grid-gap: 0.1rem;
+}
+
+.tetris-box {
+    border: 2px solid #7675AA;
+    background-color: #c8dce4;
+}
+
+#stored-block {
+    height: 4rem;
+    width: 4rem;
+}
+
+#tetris-blocks {
+    height: 20rem;
+    width: 15rem;
+}
+
+#next-blocks {
+    height: 15rem;
+    width: 4rem;
 }

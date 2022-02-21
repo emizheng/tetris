@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="tetris.js" defer></script>
-        <link rel="stylesheet" href="tetris.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width; initial-scale=1.0">
-        <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
-        <title>Tetris</title>
-    </head>
-    <body>
-        <!-- TITLE -->
-        <h1>Tetris</h1>
-        <!-- Intro Section -->
-        <div id="intro-section">
+<head>
+    <script src="tetris.js" defer></script>
+    <link rel="stylesheet" href="tetris.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+    <title>Tetris</title>
+</head>
+<body>
+    <!-- TITLE -->
+    <h1>Tetris</h1>
+    <!-- Intro Section -->
+    <div id="intro-wrap">
+        <div id="start-wrap">
             <label for="name" id="name-label">Name</label>
             <input type="text" name="name" id="name" autocomplete="off">
             <button id="start-btn">Start</button>
         </div>
-        <!-- Game Interface -->
-        <h2 id="score">Score: </h2>
+        <div id="intro-buttons-wrap">
+            <button id="leaderboard">Leaderboard</button>
+            <button id="rules">Rules</button>
+        </div>
+    </div>
+    
+    <!-- Game Interface -->
+    <div id="tetris-gameplay-wrap">
+        <div id="game-info-wrap">
+            <h2 id="score-label" class="game-info">Score: 0</h2>
+            <h2 id="level-label" class="game-info">Level: 1</h2>
+        </div>
+        
         <div id="tetris-box-wrap">
             <div id="stored-block" class="tetris-box"></div>
-            <div id="tetris-blocks" class="tetris-box"></div>
+            <div id="tetris-blocks" class="tetris-box">
+                <div></div>
+            </div>
             <div id="next-blocks" class="tetris-box"></div>
         </div>
-        <button id="pause">Pause</button>
-        <button id="restart">Restart</button>
-        <button id="end">End Game</button>
-    </body>
+    </div>
+    <button id="pause">Pause</button>
+    <button id="restart">Restart</button>
+    <button id="end">End Game</button>
+</body>
 </html>
