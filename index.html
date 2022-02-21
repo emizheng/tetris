@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="tetris.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
         <title>Tetris</title>
     </head>
     <body>
@@ -13,9 +14,18 @@
         <!-- Intro Section -->
         <div id="intro-section">
             <label for="name" id="name-label">Name</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" autocomplete="off">
             <button id="start-btn">Start</button>
         </div>
-        <!--  -->
+        <!-- Game Interface -->
+        <h2 id="score">Score: </h2>
+        <div id="tetris-box-wrap">
+            <div id="stored-block" class="tetris-box"></div>
+            <div id="tetris-blocks" class="tetris-box"></div>
+            <div id="next-blocks" class="tetris-box"></div>
+        </div>
+        <button id="pause">Pause</button>
+        <button id="restart">Restart</button>
+        <button id="end">End Game</button>
     </body>
 </html>

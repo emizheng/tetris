@@ -2,7 +2,7 @@
     font-family: fantasy;
     box-sizing: border-box;
     text-align: center;
-
+    color: #7675AA;
 }
 
 body {
@@ -11,14 +11,45 @@ body {
 }
 
 button {
-    
+    background-color: #d3d6ff;
+    border-color: #7675AA;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #7675AA;
+    color: #d3d6ff;
+    border-color: #d3d6ff;
+    border-radius: 4px;
+}
+
+/* Intro Section */
+
+#intro-section {
+    padding-bottom: 2rem;
 }
 
 h1 {
+    color: #6e78ff;
     font-size: 2.5rem;
 }
 
-#name-label,
-#start-btn {
+input {
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: none;
+    font-size: 1.25rem;
+    color: #6e78ff;
+}
+
+input:focus {
+    outline: none;
+}
+
+#name-label {
     font-size: 1.3rem;
 }
