@@ -5,6 +5,10 @@
     color: #7675AA;
 }
 
+:root {
+    --tetris-box-unit: 1.5rem;
+}
+
 body {
     background-image: url(background.png);
     background-size: cover;
@@ -77,26 +81,96 @@ input:focus {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, auto);
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     grid-gap: 0.1rem;
 }
 
 .tetris-box {
     border: 2px solid #7675AA;
-    background-color: #c8dce4;
+    background-color: #e0e4e2;
 }
 
-#stored-block {
-    height: 4rem;
-    width: 4rem;
-}
+
 
 #tetris-blocks {
-    height: 20rem;
-    width: 15rem;
+    display: grid;
+    height: calc(var(--tetris-box-unit)*20);
+    width: calc(var(--tetris-box-unit)*10);
+    grid-template-columns: repeat(10, auto);
 }
 
 #next-blocks {
-    height: 15rem;
-    width: 4rem;
+    height: 19.5rem;
+    width: 5rem;
+    align-items: center;
 }
+
+.tetris-grid {
+    border: 1px solid rgb(179, 176, 176);
+}
+
+#name-display {
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Blocks */
+
+#hold-block-wrap {
+    display: grid;
+    height: 9rem;
+    width: 6rem;
+    justify-items: center;
+    align-items: center;
+}
+
+#hold-block {
+    display: grid;
+    height: calc(var(--tetris-box-unit)*4);
+    width: calc(var(--tetris-box-unit)*3);
+    grid-template-columns: repeat(3, auto);
+    padding-bottom: 0.5rem;
+}
+
+.hold-grid {
+    /* border: 1px solid black; */
+    width: var(--tetris-box-unit);
+    height: var(--tetris-box-unit);
+}
+
+.orange-ricky {
+    background-color: #ffb380;
+    border: 1px solid white;
+}
+
+.blue-ricky {
+    background-color: #189AB4;
+    border: 1px solid white;
+}
+
+.hero {
+    background-color: #bdecf1;
+    border: 1px solid white;
+}
+
+.teewee {
+    background-color: #C3B1E1;
+    border: 1px solid white;
+}
+
+.smashboy {
+    background-color: #ffff8b;
+    border: 1px solid white;
+}
+
+.cleveland-z {
+    background-color: #ff6961;
+    border: 1px solid white;
+}
+
+.rhode-island-z {
+    background-color: #77dd77;
+    border: 1px solid white;
+}
+
+/* End Game Window */

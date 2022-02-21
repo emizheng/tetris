@@ -27,20 +27,254 @@
     <!-- Game Interface -->
     <div id="tetris-gameplay-wrap">
         <div id="game-info-wrap">
-            <h2 id="score-label" class="game-info">Score: 0</h2>
-            <h2 id="level-label" class="game-info">Level: 1</h2>
+            <h2 id="score-display" class="game-info">Score: 0</h2>
+            <h2 id="level-display" class="game-info">Level: 1</h2>
         </div>
         
         <div id="tetris-box-wrap">
-            <div id="stored-block" class="tetris-box"></div>
-            <div id="tetris-blocks" class="tetris-box">
-                <div></div>
+            <div id="hold-block-wrap" class="tetris-box">
+                <div id="hold-label">Hold</div>
+                <div id="hold-block">
+                    <div class="hold-grid"></div>
+                    <div class="hold-grid"></div>
+                    <div class="hold-grid"></div>
+
+                    <div class="hold-grid"></div>
+                    <div class="hold-grid rhode-island-z"></div>
+                    <div class="hold-grid rhode-island-z"></div>
+
+                    <div class="hold-grid rhode-island-z"></div>
+                    <div class="hold-grid rhode-island-z"></div>
+                    <div class="hold-grid"></div>
+
+                    <div class="hold-grid"></div>
+                    <div class="hold-grid"></div>
+                    <div class="hold-grid"></div>
+                </div>
             </div>
-            <div id="next-blocks" class="tetris-box"></div>
+            <div id="tetris-blocks" class="tetris-box">
+                <!-- A bunch of divs for the tetris grid with class="tetris-grid" -->
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+                <div class="tetris-grid"></div>
+            </div>
+            <div id="next-blocks" class="tetris-box">
+                <div id="next-label">Next</div>
+                <div id="next-block-1"></div>
+                <div id="next-block-2"></div>
+                <div id="next-block-3"></div>
+            </div>
+        </div>
+
+        <div id="game-buttons-wrap">
+            <h2 id="name-display" class="game-info">Name: </h2>
+            <button id="pause">Pause</button>
+            <button id="restart">Restart</button>
+            <button id="end">End Game</button>
         </div>
     </div>
-    <button id="pause">Pause</button>
-    <button id="restart">Restart</button>
-    <button id="end">End Game</button>
+    
+    <!-- End Game Display -->
+    <div id="end-game-wrap">
+        <div id="score">Score: </div>
+        <button id="restart-btn">Restart</button>
+    </div>
 </body>
 </html>
