@@ -36,7 +36,12 @@ button:hover {
 }
 
 #intro-wrap {
+    display: none;
     padding-bottom: 2rem;
+}
+
+#intro-wrap.show {
+    display: block;
 }
 
 h1 {
@@ -63,6 +68,14 @@ input:focus {
 }
 
 /* Game Play Section */
+
+#tetris-gameplay-wrap.show {
+    display: block;
+}
+
+#tetris-gameplay-wrap {
+    display: none;
+}
 
 #game-info-wrap {
     display: grid;
@@ -99,10 +112,11 @@ input:focus {
     grid-template-columns: repeat(10, auto);
 }
 
-#next-blocks {
-    height: 19.5rem;
-    width: 5rem;
-    align-items: center;
+#next-blocks-wrap {
+    display: grid;
+    height: 24rem;
+    width: 6rem;
+    justify-items: center;
 }
 
 .tetris-grid {
@@ -124,7 +138,8 @@ input:focus {
     align-items: center;
 }
 
-#hold-block {
+#hold-block,
+.next-block {
     display: grid;
     height: calc(var(--tetris-box-unit)*4);
     width: calc(var(--tetris-box-unit)*3);
@@ -132,7 +147,8 @@ input:focus {
     padding-bottom: 0.5rem;
 }
 
-.hold-grid {
+.hold-grid,
+.next-grid {
     /* border: 1px solid black; */
     width: var(--tetris-box-unit);
     height: var(--tetris-box-unit);
@@ -174,3 +190,51 @@ input:focus {
 }
 
 /* End Game Window */
+.overlay-screen {
+    display: none;
+    background-color: rgba(253, 226, 213, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#endgame-wrap.show,
+#pause-wrap.show,
+#leaderboard-wrap.show {
+    display: flex;
+}
+
+.endgame-info,
+#pause-label {
+    font-size: 2rem;
+}
+
+#name-input-wrap,
+#level-display.endgame-info,
+#pause-label {
+    padding-bottom: 2rem;
+}
+
+#restart-btn,
+#resume-btn {
+    font-size: 2.5rem;
+}
+
+#close-leaderboard-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+#leaderboard-table-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    border: 1px solid black;
+}
+

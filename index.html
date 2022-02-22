@@ -12,7 +12,7 @@
     <!-- TITLE -->
     <h1>Tetris</h1>
     <!-- Intro Section -->
-    <div id="intro-wrap">
+    <div id="intro-wrap" class="">
         <div id="start-wrap">
             <label for="name" id="name-label">Name</label>
             <input type="text" name="name" id="name" autocomplete="off">
@@ -255,11 +255,50 @@
                 <div class="tetris-grid"></div>
                 <div class="tetris-grid"></div>
             </div>
-            <div id="next-blocks" class="tetris-box">
+            <div id="next-blocks-wrap" class="tetris-box">
                 <div id="next-label">Next</div>
-                <div id="next-block-1"></div>
-                <div id="next-block-2"></div>
-                <div id="next-block-3"></div>
+                <div id="next-block-1" class="next-block">
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                </div>
+                <div id="next-block-2" class="next-block">
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                </div>
+                <div id="next-block-3" class="next-block">
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                    <div class="next-grid"></div>
+                </div>
             </div>
         </div>
 
@@ -272,9 +311,38 @@
     </div>
     
     <!-- End Game Display -->
-    <div id="end-game-wrap">
-        <div id="score">Score: </div>
+    <div id="endgame-wrap" class="overlay-screen">
+        <div id="score-display" class="endgame-info">Score: </div>
+        <div id="level-display" class="endgame-info">Level: </div>
+        <div id="name-input-wrap">
+            <label for="name" id="name-label">Name</label>
+            <input type="text" name="name" id="endgame-name-input" autocomplete="off">
+        </div>
         <button id="restart-btn">Restart</button>
+    </div>
+
+    <!-- Paused Game Display -->
+    <div id="pause-wrap" class="overlay-screen">
+        <div id="pause-label">Paused</div>
+        <button id="resume-btn">Resume</button>
+    </div>
+
+    <!-- Leaderboard Display -->
+    <div id="leaderboard-wrap" class="overlay-screen">
+        <button id="close-leaderboard-btn">×</button>
+        <h2 id="leaderboard-title">Tetris Leaderboard</h2>
+        <div id="leaderboard-table-wrap">
+            <div class="high-score-name"></div>
+            <div class="high-score-num"></div>
+            <div class="high-score-name"></div>
+            <div class="high-score-num"></div>
+            <div class="high-score-name"></div>
+            <div class="high-score-num"></div>
+            <div class="high-score-name"></div>
+            <div class="high-score-num"></div>
+            <div class="high-score-name"></div>
+            <div class="high-score-num"></div>
+        </div>
     </div>
 </body>
 </html>
