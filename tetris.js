@@ -61,7 +61,6 @@ let activeBlock = {}
 let downSpeed = 1000
 let bottomEdge = false
 let gameEnd = false
-let downInterval = null
 let intervals = new Set()
 
 // Functions
@@ -82,7 +81,7 @@ function startGame() {
     newBlockSelector()
     renderBlock()
     
-    moveAutoDown('startGame')
+    moveAutoDown()
 }
 
 function placeBlock() {
@@ -100,8 +99,7 @@ function placeBlock() {
     } else {
         newBlockSelector()
         renderBlock()
-        moveAutoDown('placeBlock')
-        console.log('new block')
+        moveAutoDown()
     }
 }
 
@@ -137,13 +135,13 @@ function renderBlock() {
         }
     })
 
-    checkBottomEdge(activeBlock.position);
+    // checkBottomEdge(activeBlock.position);
 
-    if (bottomEdge === true) {
-        console.log('bottom true')
-        oldPosition = []
-        placeBlock()
-    }
+    // if (bottomEdge === true) {
+    //     console.log('bottom true')
+    //     oldPosition = []
+    //     placeBlock()
+    // }
 }
 
 function rotate(direction) {
@@ -225,16 +223,10 @@ function moveDown() {
     }
 }
 
-
-function moveAutoDown(message) {
-    oldPosition = [...activeBlock.position];
-    checkBottomEdge(oldPosition)
-
-    
-    let iter = 0
-
-    downInterval = setInterval(function() {
-        if (bottomEdge === false && iter < 18) {
+function downInterval() {
+    let downIntervalInstance = setInterval(function() {
+        let bottomEdge = checkBottomEdge(oldPosition)
+        if (bottomEdge === false) {
             activeBlock.position.forEach((num, index) => {
                 activeBlock.position[index] += 10
             })
@@ -242,20 +234,26 @@ function moveAutoDown(message) {
         }
 
         oldPosition = [...activeBlock.position];
-        checkBottomEdge(oldPosition);
-        console.log(`${message}: ${iter} | ${intervals} | ${downInterval}`);
-
-        iter++;
+        bottomEdge = checkBottomEdge(oldPosition);
+        console.log(bottomEdge)
         
-        (bottomEdge === true && clearInterval(downInterval) && intervals.add(downInterval));
+        if (bottomEdge === true) {
+            console.log('limit block')
+            clearInterval(downIntervalInstance)
+            placeBlock()
+        }
     }, downSpeed);
-    
+}
 
-    console.log(`end intervals for ${message}`)
+function moveAutoDown() {
+    oldPosition = [...activeBlock.position];
+    checkBottomEdge(oldPosition)
+
     
-    if (bottomEdge === true) {
-        placeBlock()
-    }
+    downInterval()
+
+    
+    checkBottomEdge(activeBlock.position)
 }
 
 function dropBlock() {
@@ -295,9 +293,13 @@ function checkKey(e) {
 }
 
 function checkBottomEdge (position) {
+    // console.log(bottomEdge)
     bottomEdge = position.some(num => {
         return (num >= 190) || ((tetrisGrids[num + 10].classList.contains('filled')) === true)
     })
+    return bottomEdge
 }
 
 
+console.log(a)
+var a = 1
